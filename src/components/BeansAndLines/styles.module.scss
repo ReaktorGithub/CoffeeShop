@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.line {
+  width: 60px;
+  border-bottom: 1px solid #000;
+}
+
+.beans {
+  user-select: none;
+}

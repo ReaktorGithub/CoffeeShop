@@ -1,0 +1,20 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 39px;
+  padding: 80px 32px 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.textHeading {
+  font-size: 24px;
+}
+
+.picturesBox {
+  display: flex;
+  gap: 71px;
+}

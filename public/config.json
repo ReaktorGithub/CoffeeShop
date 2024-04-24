@@ -1,0 +1,56 @@
+{
+  "countries": [
+    {
+      "_id": "0",
+      "displayName": "Brazil"
+    },
+    {
+      "_id": "1",
+      "displayName": "Kenya"
+    },
+    {
+      "_id": "2",
+      "displayName": "Columbia"
+    }
+  ],
+  "products": [
+    {
+      "_id": "0",
+      "displayName": "AROMISTICO Coffee 1 kg",
+      "displayPrice": "6.99$",
+      "originCountryId": "0",
+      "imgSrc": "/images/products/aromistico.png",
+      "featuredOrder": 3
+    },
+    {
+      "_id": "1",
+      "displayName": "AROMISTICO Coffee 1 kg",
+      "displayPrice": "6.99$",
+      "originCountryId": "1",
+      "imgSrc": "/images/products/aromistico.png"
+    },
+    {
+      "_id": "2",
+      "displayName": "AROMISTICO Coffee 1 kg",
+      "displayPrice": "6.99$",
+      "originCountryId": "2",
+      "imgSrc": "/images/products/aromistico.png"
+    },
+    {
+      "_id": "3",
+      "displayName": "Solimo Coffee Beans 2 kg",
+      "displayPrice": "10.73$",
+      "originCountryId": "0",
+      "imgSrc": "/images/products/solimo.png",
+      "featuredOrder": 1
+    },
+    {
+      "_id": "4",
+      "displayName": "Presto Coffee Beans 1 kg",
+      "displayPrice": "15.99$",
+      "originCountryId": "0",
+      "imgSrc": "/images/products/presto.png",
+      "featuredOrder": 2
+    }
+  ]
+}

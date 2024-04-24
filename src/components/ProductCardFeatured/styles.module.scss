@@ -1,0 +1,30 @@
+.root {
+  width: 220px;
+  height: 240px;
+  border-radius: 8px;
+  background: #FFFFFF65;
+  padding: 22px 20px;
+  flex-shrink: 0;
+}
+
+.imageBox {
+  width: 167px;
+  height: 134px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+}
+
+.textName {
+  width: 100%;
+  text-align: center;
+  margin: 12px 0 8px;
+}
+
+.textPrice {
+  width: 100%;
+  text-align: right;
+  font-weight: 700;
+}

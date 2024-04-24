@@ -1,0 +1,15 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 71px;
+}
+
+.noResultsText {
+  width: 100%;
+  text-align: center;
+  color: #00000050;
+  font-size: 20px;
+  margin-top: 32px;
+}

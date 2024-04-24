@@ -1,0 +1,28 @@
+.root {
+  width: 100%;
+  display: flex;
+  gap: 83px;
+}
+
+.filterBox {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.textLabel {
+  flex-shrink: 0;
+}
+
+.searchInputBox {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.filterButtonsBox {
+  display: flex;
+  gap: 5px;
+  width: 235px;
+  flex-shrink: 0;
+}
