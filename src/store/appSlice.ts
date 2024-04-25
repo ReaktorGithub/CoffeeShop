@@ -1,6 +1,7 @@
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {IAppInitialState, IConfig} from "./types";
 import axios from "axios";
+import putValueToArray from "../utils/putValueToArray";
 
 export const loadConfig = createAsyncThunk('config/load', async (): Promise<IConfig> => {
   const result = await axios({
@@ -15,7 +16,7 @@ export const initialState: IAppInitialState = {
   countriesList: [],
   productsList: [],
   search: '',
-  selectedCountryId: null,
+  selectedCountryIds: [],
 };
 
 const appSlice = createSlice({
@@ -28,8 +29,8 @@ const appSlice = createSlice({
     setSearch(state, { payload }: PayloadAction<string>) {
       state.search = payload;
     },
-    setSelectedCountryId(state, { payload }: PayloadAction<string | null>) {
-      state.selectedCountryId = payload;
+    setSelectedCountryId(state, { payload }: PayloadAction<string>) {
+      state.selectedCountryIds = putValueToArray(state.selectedCountryIds, payload);
     },
   },
   extraReducers(builder) {

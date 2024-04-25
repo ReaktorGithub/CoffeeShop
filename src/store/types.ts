@@ -32,5 +32,5 @@ export interface IAppInitialState {
   countriesList: ICountry[];
   productsList: IProduct[];
   search: string;
-  selectedCountryId: string | null;
+  selectedCountryIds: string[];
 }

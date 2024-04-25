@@ -9,7 +9,7 @@ import FilterButton from "../../ui/FilterButton";
 const ProductSearchBar: FC = () => {
 	const search = useAppSelector((state) => state.app.search);
 	const countriesList = useAppSelector((state) => state.app.countriesList);
-	const selectedCountryId = useAppSelector((state) => state.app.selectedCountryId);
+	const selectedCountryIds = useAppSelector((state) => state.app.selectedCountryIds);
 
 	const dispatch = useAppDispatch();
 
@@ -17,12 +17,8 @@ const ProductSearchBar: FC = () => {
 		dispatch(setSearch(value));
 	}
 
-	const handleChangeFilter = (value: string) => {
-		if (selectedCountryId === value) {
-			dispatch(setSelectedCountryId(null));
-		} else {
-			dispatch(setSelectedCountryId(value));
-		}
+	const handleChangeFilter = (id: string) => {
+		dispatch(setSelectedCountryId(id));
 	}
 
 	return (
@@ -44,7 +40,7 @@ const ProductSearchBar: FC = () => {
 							key={country._id}
 							text={country.displayName}
 							onClick={() => handleChangeFilter(country._id)}
-							active={country._id === selectedCountryId}
+							active={selectedCountryIds.includes(country._id)}
 						/>)
 					}
 				</div>

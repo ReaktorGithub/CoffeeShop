@@ -28,12 +28,12 @@ const getCountryById = (countries: ICountry[], id: string): string => {
 export const filteredProductsSelector = createSelector(
   (state: RootState) => (state.app),
   (app): IProductDisplay[] => {
-    const { productsList, search, countriesList, selectedCountryId} = app;
+    const { productsList, search, countriesList, selectedCountryIds} = app;
 
     const searchString = search.trim().toLowerCase();
 
     const filtered = productsList.filter((product) => {
-      const isFilter = selectedCountryId ? product.originCountryId === selectedCountryId : true;
+      const isFilter = selectedCountryIds.length ? selectedCountryIds.includes(product.originCountryId) : true;
       return product.displayName.toLowerCase().includes(searchString) && isFilter;
     });
 
