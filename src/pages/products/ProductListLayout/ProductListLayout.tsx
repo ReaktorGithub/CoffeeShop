@@ -1,8 +1,9 @@
 import styles from './styles.module.scss';
 import ProductSearchBar from "../../../components/ProductSearchBar";
 import ProductList from "../../../components/ProductList";
+import {FC} from "react";
 
-const ProductListLayout = () => {
+const ProductListLayout: FC = () => {
 	return (
 		<div className={styles.root}>
 			<div className={styles.searchBarBox}>

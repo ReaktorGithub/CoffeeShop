@@ -2,30 +2,29 @@ import styles from './App.module.scss';
 import {FC, useEffect} from "react";
 import useAppDispatch from "./hooks/useAppDispatch";
 import {loadConfig} from "./store/appSlice";
-import useAppSelector from "./hooks/useAppSelector";
 import LandingPage from "./pages/landing";
 import ProductsPage from "./pages/products";
+import ProductPage from "./pages/product";
+import {Route, Routes} from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App: FC = () => {
-  const page = useAppSelector((state) => state.app.page);
-
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(loadConfig());
   }, []);
 
-  const renderPage = () => {
-    switch (page) {
-      case 'products': return <ProductsPage />;
-      case 'product': return <p>products</p>;
-      default: return <LandingPage />;
-    }
-  }
-
   return (
     <main className={styles.root}>
-      {renderPage()}
+      <Header />
+      <Routes>
+        <Route path='/' element={<LandingPage />}/>
+        <Route path='/products' element={<ProductsPage />}/>
+        <Route path='/products/:id' element={<ProductPage />}/>
+      </Routes>
+      <Footer />
     </main>
   );
 }

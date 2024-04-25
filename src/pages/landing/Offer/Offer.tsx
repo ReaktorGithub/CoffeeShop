@@ -1,14 +1,13 @@
 import styles from './styles.module.scss';
 import ButtonTransparent from "../../../ui/ButtonTransparent";
+import {useNavigate} from 'react-router-dom';
 import {FC} from "react";
-import useAppDispatch from "../../../hooks/useAppDispatch";
-import {setPage} from "../../../store/appSlice";
 
 const Offer: FC = () => {
-	const dispatch = useAppDispatch();
+	const navigate  = useNavigate();
 
 	const handleClickMore = () => {
-		dispatch(setPage('products'));
+		navigate('/products', { replace: true });
 	}
 
 	return (

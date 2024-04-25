@@ -6,11 +6,12 @@ interface IProps {
 	name: string;
 	country: string;
 	price: string;
+	onClick: () => void;
 }
 
-const ProductCard: FC<IProps> = ({ imgUrn, name, price, country }) => {
+const ProductCard: FC<IProps> = ({ imgUrn, name, price, country, onClick }) => {
 	return (
-		<div className={styles.root}>
+		<div className={styles.root} onClick={onClick}>
 			<div className={styles.imageBox} style={{ backgroundImage: `url(${imgUrn})`}}/>
 			<p className={styles.textName}>{name}</p>
 			<p className={styles.textCountry}>{country}</p>

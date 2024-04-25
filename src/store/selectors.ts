@@ -1,6 +1,6 @@
 import {createSelector} from "@reduxjs/toolkit";
 import {RootState} from "./index";
-import {IProduct, IProductDisplay} from "./types";
+import {ICountry, IProduct, IProductDisplay} from "./types";
 
 export const featuredProductsSelector = createSelector(
   (state: RootState) => (state.app.productsList),
@@ -21,20 +21,19 @@ export const featuredProductsSelector = createSelector(
   }
 );
 
+const getCountryById = (countries: ICountry[], id: string): string => {
+  return countries.find((country) => country._id === id)?.displayName || 'N/A';
+}
+
 export const filteredProductsSelector = createSelector(
-  (state: RootState) => ({
-    products: state.app.productsList,
-    countries: state.app.countriesList,
-    search: state.app.search,
-    filterBy: state.app.selectedCountryId,
-  }),
-  (data): IProductDisplay[] => {
-    const { products, filterBy, search, countries} = data;
+  (state: RootState) => (state.app),
+  (app): IProductDisplay[] => {
+    const { productsList, search, countriesList, selectedCountryId} = app;
 
     const searchString = search.trim().toLowerCase();
 
-    const filtered = products.filter((product) => {
-      const isFilter = filterBy ? product.originCountryId === filterBy : true;
+    const filtered = productsList.filter((product) => {
+      const isFilter = selectedCountryId ? product.originCountryId === selectedCountryId : true;
       return product.displayName.toLowerCase().includes(searchString) && isFilter;
     });
 
@@ -43,7 +42,7 @@ export const filteredProductsSelector = createSelector(
       name: product.displayName,
       price: product.displayPrice,
       imgSrc: product.imgSrc,
-      country: countries.find((country) => country._id === product.originCountryId)?.displayName || 'N/A',
+      country: getCountryById(countriesList, product.originCountryId),
     }));
   }
-)
+);

@@ -1,17 +1,14 @@
-import Header from "../../components/Header";
 import Offer from "./Offer";
 import AboutUs from "./AboutUs";
 import OurBest from "./OurBest";
-import Footer from "../../components/Footer";
+import {FC} from "react";
 
-const LandingPage = () => {
+const LandingPage: FC = () => {
   return (
     <>
-      <Header />
       <Offer />
       <AboutUs />
       <OurBest />
-      <Footer />
     </>
   );
 };

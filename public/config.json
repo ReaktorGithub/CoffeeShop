@@ -20,6 +20,8 @@
       "displayPrice": "6.99$",
       "originCountryId": "0",
       "imgSrc": "/images/products/aromistico.png",
+      "imgDetailedSrc": "/images/products/aromistico-detailed.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "featuredOrder": 3
     },
     {
@@ -27,14 +29,18 @@
       "displayName": "AROMISTICO Coffee 1 kg",
       "displayPrice": "6.99$",
       "originCountryId": "1",
-      "imgSrc": "/images/products/aromistico.png"
+      "imgSrc": "/images/products/aromistico.png",
+      "imgDetailedSrc": "/images/products/aromistico-detailed.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "_id": "2",
       "displayName": "AROMISTICO Coffee 1 kg",
       "displayPrice": "6.99$",
       "originCountryId": "2",
-      "imgSrc": "/images/products/aromistico.png"
+      "imgSrc": "/images/products/aromistico.png",
+      "imgDetailedSrc": "/images/products/aromistico-detailed.jpg",
+      "description": "Lorem ipsum dolor sit amet"
     },
     {
       "_id": "3",
@@ -42,6 +48,8 @@
       "displayPrice": "10.73$",
       "originCountryId": "0",
       "imgSrc": "/images/products/solimo.png",
+      "imgDetailedSrc": "/images/products/solimo-detailed.png",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "featuredOrder": 1
     },
     {
@@ -50,6 +58,8 @@
       "displayPrice": "15.99$",
       "originCountryId": "0",
       "imgSrc": "/images/products/presto.png",
+      "imgDetailedSrc": "/images/products/presto-detailed.jpg",
+      "description": "No description",
       "featuredOrder": 2
     }
   ]

@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {IAppInitialState, IConfig, TPage} from "./types";
+import {IAppInitialState, IConfig} from "./types";
 import axios from "axios";
 
 export const loadConfig = createAsyncThunk('config/load', async (): Promise<IConfig> => {
@@ -12,12 +12,10 @@ export const loadConfig = createAsyncThunk('config/load', async (): Promise<ICon
 
 export const initialState: IAppInitialState = {
   loading: false,
-  page: 'landing',
   countriesList: [],
   productsList: [],
   search: '',
   selectedCountryId: null,
-  selectedProductId: null,
 };
 
 const appSlice = createSlice({
@@ -27,17 +25,11 @@ const appSlice = createSlice({
     setLoading(state, { payload }: PayloadAction<boolean>) {
       state.loading = payload;
     },
-    setPage(state, { payload }: PayloadAction<TPage>) {
-      state.page = payload;
-    },
     setSearch(state, { payload }: PayloadAction<string>) {
       state.search = payload;
     },
     setSelectedCountryId(state, { payload }: PayloadAction<string | null>) {
       state.selectedCountryId = payload;
-    },
-    setSelectedProductId(state, { payload }: PayloadAction<string | null>) {
-      state.selectedProductId = payload;
     },
   },
   extraReducers(builder) {
@@ -59,10 +51,8 @@ const appSlice = createSlice({
 
 export const {
   setLoading,
-  setPage,
   setSearch,
   setSelectedCountryId,
-  setSelectedProductId,
 } = appSlice.actions;
 
 export default appSlice.reducer;

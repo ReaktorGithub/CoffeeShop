@@ -9,6 +9,8 @@ export interface IProduct {
   displayPrice: string;
   originCountryId: string;
   imgSrc: string;
+  imgDetailedSrc: string;
+  description: string;
   featuredOrder?: number;
 }
 
@@ -25,14 +27,10 @@ export interface IConfig {
   products: IProduct[];
 }
 
-export type TPage = 'landing' | 'products' | 'product';
-
 export interface IAppInitialState {
   loading: boolean;
-  page: TPage;
   countriesList: ICountry[];
   productsList: IProduct[];
   search: string;
   selectedCountryId: string | null;
-  selectedProductId: string | null;
 }

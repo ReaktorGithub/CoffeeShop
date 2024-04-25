@@ -13,16 +13,6 @@
   position: relative;
 }
 
-.link {
-  font-size: 12px;
-  color: #000;
-  user-select: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .coffee {
   position: absolute;
   bottom: 3px;

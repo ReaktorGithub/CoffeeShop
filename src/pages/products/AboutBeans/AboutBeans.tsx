@@ -1,7 +1,8 @@
 import styles from './styles.module.scss';
 import BeansAndLines from "../../../components/BeansAndLines";
+import {FC} from "react";
 
-const AboutBeans = () => {
+const AboutBeans: FC = () => {
 	return (
 		<div className={styles.root}>
 			<div className={styles.aboutBox}>
